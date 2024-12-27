@@ -42,5 +42,5 @@ This project is a burger restaurant website for a fictional business called "Egz
 -Add content for the Menu page, including detailed descriptions of each burger.
 
 -Make the page fully functional and user-friendly by enhancing accessibility and ensuring all links and buttons work as expected.
-
+-----------------------------------------------------
 "This project serves as a foundational prototype for a digital presence for "Egzon's Burgers," with ongoing updates and improvements to come."
