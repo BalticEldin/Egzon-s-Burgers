@@ -1,0 +1,269 @@
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    /* Make it cover the whole screen */
+    background-position: center center;
+    /* Center the image */
+    background-attachment: fixed;
+    /* Keeps the image fixed while scrolling */
+    background-repeat: no-repeat;
+}
+
+.logoPosition {
+    position: relative;
+    right: 2.625rem;
+    bottom: 0.625rem;
+    width: 8.125rem;
+    height: 8.125rem;
+}
+
+.textlogoPosition {
+    position: relative;
+    top: 0.313rem;
+    right: 5rem;
+}
+
+.titleFont {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.navbar {
+    height: 4.375rem;
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+
+}
+
+
+.headingFont {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+
+}
+
+.textFont {
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+
+}
+
+.mainArticlePosition {
+    position: relative;
+    top: 2.5rem;
+}
+
+.buttonBackgroundColor {
+    background-color: orangered !important;
+
+}
+
+.BurgerTextPosition {
+    position: relative;
+    bottom: 3.125rem;
+}
+
+.EgzonBurgerTextPosition {
+    position: relative;
+    bottom: 6.25rem;
+}
+
+.burger-img {
+    transition: transform 0.4s ease-in-out;
+    /* Smooth transition */
+}
+
+.burger-img:hover {
+    transform: scale(1.2);
+    cursor: grab;
+    /* Grow the image by 20% */
+}
+
+footer {
+    background-color: black;
+
+    padding-top: 2rem;
+
+    padding-bottom: 0.5rem;
+
+    margin-top: 5rem;
+
+}
+
+
+
+footer .headingFont {
+    color: white;
+
+}
+
+footer .text-white {
+    color: white !important;
+
+}
+
+footer a {
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    color: orangered;
+
+}
+
+footer .d-flex {
+    display: flex;
+
+}
+
+footer .justify-content-center {
+    justify-content: center;
+
+}
+
+footer .justify-content-md-end {
+    justify-content: flex-end;
+
+}
+
+footer .align-items-end {
+    align-items: flex-end;
+
+}
+
+footer .text-center {
+    text-align: center;
+
+}
+
+footer .text-md-start {
+    text-align: left;
+
+}
+
+footer .text-md-end {
+    text-align: right;
+
+}
+
+
+
+@media (max-width: 576px) {
+    .navbar {
+        height: auto;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .navbar {
+        height: auto;
+    }
+}
+
+/* Default: Layout for large screens (desktop) */
+@media (min-width: 992px) {
+    .row {
+        display: flex;
+        align-items: center;
+    }
+
+    /* On large screens, image is on the right and text on the left */
+    .col-lg-6 {
+        flex: 1;
+    }
+
+    /* Reorder image to the right and text to the left on large screens */
+    .col-lg-6:first-child {
+        order: 2;
+    }
+
+    .col-lg-6:last-child {
+        order: 1;
+    }
+
+}
+
+/* For small screens (mobile), stack the content vertically */
+@media (max-width: 991px) {
+    .row {
+
+        text-align: center;
+        display: block;
+        /* Stack the content vertically */
+    }
+
+    /* Add some spacing between the image and text */
+    .col-12 {
+        margin-top: 10.625rem;
+        margin-bottom: 12.5rem;
+        position: relative;
+        bottom: 5.625rem;
+    }
+
+
+}
+
+/* Animation for text flying in from the left */
+@keyframes flyInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for image fading in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the animations */
+.mainArticlePosition .col-12.col-lg-6.text-center.text-lg-end img {
+    animation: fadeIn 1.5s ease-out forwards;
+    width: 100%;
+    /* Ensure it doesn't overflow */
+    max-width: 450px;
+    /* Limit the maximum width */
+    height: auto;
+    /* Keep aspect ratio intact */
+}
+
+.mainArticlePosition .col-12.col-lg-6.text-center.text-lg-start {
+    animation: flyInFromLeft 1s ease-out forwards;
+}
+
+/* Ensure image responsiveness for small and medium screens */
+@media (max-width: 992px) {
+    .mainArticlePosition .col-12.col-lg-6.text-center.text-lg-end img {
+        max-width: 90%;
+        /* Reduce image size for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .mainArticlePosition .col-12.col-lg-6.text-center.text-lg-end img {
+        max-width: 80%;
+        /* Further reduce image size for small screens */
+    }
+}
