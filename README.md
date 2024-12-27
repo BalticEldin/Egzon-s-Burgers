@@ -1,6 +1,7 @@
 #Egzon's Burgers
 
 This project is a burger restaurant website for a fictional business called "Egzon's Burgers." It is designed to provide an engaging and responsive user experience with a clean, modern interface. The website showcases the brand, features, and menu items, and includes essential sections such as a header, main content area, and footer. Below is a breakdown of the key components:
+
 #Technologies used:
 -HTML/CSS: For structuring and styling the page, ensuring the content is well-organized and visually appealing.
 -Bootstrap: A CSS framework that aids in making the website responsive, ensuring it looks good on both desktop and mobile devices.
